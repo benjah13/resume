@@ -3,9 +3,8 @@ import BgAnimation from '../components/BackgroundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
 import Carreer from '../components/Carreer/Carreer';
 import Technologies from '../components/Technologies/Technologies';
-import Timeline from '../components/TimeLine/TimeLine';
-import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
+import Layout from '../layout/Layout';
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
       </Section>
       <Carreer />
       <Technologies />
-      <Timeline />
       <Acomplishments />
     </Layout>
   );

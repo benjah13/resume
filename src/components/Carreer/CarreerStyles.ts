@@ -5,7 +5,7 @@ export const Img = styled.img`
   height:100%;
   object-fit: cover;
   overflow: hidden;
-`
+`;
 
 export const GridContainer = styled.section`
 display: grid;
@@ -21,7 +21,7 @@ row-gap: 3rem;
   padding-bottom: 0;
 }
 
-`
+`;
 export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
@@ -105,8 +105,8 @@ export const TagList = styled.ul`
 display: flex;
 justify-content: space-around;
 padding: 2rem;
-`
+`;
 export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
-`
+`;

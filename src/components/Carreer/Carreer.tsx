@@ -13,10 +13,11 @@ const Carreer = () => (
     <SectionTitle main>Carrière</SectionTitle>
     <VerticalTimeline>
     {
-      carreer.map((carreerItem) => {
+      carreer.map((carreerItem, key) => {
         return <VerticalTimelineElement
         contentStyle={{ background: carreerItem.color, color: '#fff' }}
         contentArrowStyle={{ borderRight: `7px solid  ${carreerItem.color}` }}
+        key={key}
         date={carreerItem.date}
         iconStyle={{ background: carreerItem.color, color: '#fff' }}
         icon={ <WorkIcon/>}
@@ -32,9 +33,9 @@ const Carreer = () => (
         {carreerItem.description}
         </p>
         <ul>
-          {carreerItem.tags.map((tag) => <li>{tag}</li>)}
+          {carreerItem.tags.map((tag) => <li key={tag}>{tag}</li>)}
         </ul>
-      </VerticalTimelineElement>
+      </VerticalTimelineElement>;
       })
     }
   

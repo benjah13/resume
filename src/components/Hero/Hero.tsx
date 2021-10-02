@@ -6,7 +6,7 @@ import { LeftSection } from './HeroStyles';
 import Link from 'next/link';
 
 
-const Hero = (props) => (
+const Hero = () => (
   <>
     <Section row nopadding>
       <LeftSection>
@@ -17,7 +17,7 @@ const Hero = (props) => (
         <SectionText>
         Je suis Software Engineer, et passionné par mon metier. Ce site me permettra de me présenter mon parcours et vous permettra de mieux me connaitre.
         </SectionText>
-        <Link href="#about"><Button onClick={props.handleClick}>Qui suis-je?</Button>
+        <Link href="#about"><Button alt={undefined} form={undefined} disabled={false} onClick={undefined} >Qui suis-je?</Button>
      </Link> </LeftSection>
     </Section>
   </>

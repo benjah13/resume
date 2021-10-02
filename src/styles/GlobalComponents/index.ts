@@ -1,9 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const Section = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+
+type SectionProps = {
+  grid?: boolean,
+  row?: boolean,
+  nopadding?: boolean,
+};
+
+export const Section = styled.section<SectionProps>`
+  display: ${(props) => props.grid ? 'grid' : 'flex' };
+  flex-direction: ${(props) => props.row ? 'row' : 'column' };
+  padding: ${(props) => props.nopadding ? '0' : '32px 48px 0' } ;
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
@@ -17,14 +24,19 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? '0' : '16px 16px 0' } ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
   }
-`
+`;
 
-export const SectionTitle = styled.h2`
+type SectionTitleProps = {
+  main?: boolean,
+  center?: boolean
+};
+
+export const SectionTitle = styled.h2<SectionTitleProps>`
   font-weight: 800;
   font-size: ${(props) => props.main ? '65px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
@@ -52,7 +64,7 @@ export const SectionTitle = styled.h2`
     padding: ${(props) => props.main ? '16px 0 8px' : '0'};
     max-width: 100%;
   }
-`
+`;
 
 export const SectionText = styled.p`
   max-width: 800px;
@@ -74,9 +86,13 @@ export const SectionText = styled.p`
     line-height: 24px;
     padding-bottom: 16px;
   }
-`
+`;
 
-export const SectionDivider = styled.div`
+type DivProps = {
+  colorAlt?: boolean,
+  divider?: boolean,
+};
+export const SectionDivider = styled.div<DivProps>`
 
   width: 64px;
   height: 6px;
@@ -86,7 +102,7 @@ export const SectionDivider = styled.div`
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+    margin: ${(props) => props.divider ? '4rem 0' : '' };
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 48px;
@@ -97,7 +113,7 @@ export const SectionDivider = styled.div`
     width: 32px;
     height: 2px;
   }
-`
+`;
 export const SectionSubText = styled.p`
   max-width: 800px;
   font-weight: 300;
@@ -115,7 +131,7 @@ export const SectionSubText = styled.p`
     font-size: 14px;
     line-height: 22px;
   }
-`
+`;
 export const SecondaryBtn = styled.button`
   color: #FFF;
   background: none;
@@ -164,9 +180,13 @@ export const SecondaryBtn = styled.button`
     font-size: 14px;
     line-height: 16px;
   }
-`
-
-export const ButtonBack = styled.div`
+`;
+type ButtonBackProps = {
+  alt?: boolean,
+  form?: boolean
+  disabled?: boolean
+};
+export const ButtonBack = styled.div<ButtonBackProps>`
   width: ${({ alt }) => alt ? '150px' : '262px'};
   height: ${({ alt }) => alt ? '52px' : '64px'};
   border-radius: 50px;
@@ -197,9 +217,14 @@ export const ButtonBack = styled.div`
     font-size: 14px;
     margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
   }
-`
-
-export const ButtonFront = styled.button`
+`;
+type ButtonFrontProps = {
+  alt?: boolean,
+  form?: boolean
+  disabled?: boolean,
+  theme?: any
+};
+export const ButtonFront = styled.div<ButtonFrontProps>`
   border: none;
   border-radius: 50px;
   color: #fff;
@@ -243,9 +268,11 @@ export const ButtonFront = styled.button`
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 14px;
   }
-`
-
-export const LinkContainer = styled.div`
+`;
+type LinkContainerProps = {
+  large?: boolean,
+};
+export const LinkContainer = styled.div<LinkContainerProps>`
   margin-left: ${({ large }) => large ? '24px' : '16px'};
   transition: 0.3s ease;
   justify-content: center;
@@ -265,9 +292,12 @@ export const LinkContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     margin-left: ${({ large }) => large ? '0' : '8px'};
   }
-`
-
-export const LinkIconImg = styled.div`
+`;
+type LinkIconImgProps = {
+  large?: boolean,
+  nav?: boolean
+};
+export const LinkIconImg = styled.div<LinkIconImgProps>`
   display: flex;  
   height: ${({ large }) => large ? '32px' : '24px'};
 
@@ -278,4 +308,4 @@ export const LinkIconImg = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     height: ${({ large }) => large ? '32px' : '16px'};
   }
-`
+`;

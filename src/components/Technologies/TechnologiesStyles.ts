@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ImageContainer = styled.div`
   text-align: center;
@@ -21,11 +21,11 @@ export const ImageContainer = styled.div`
     padding: 0;
     margin-top: 16px;
   }
-`
+`;
 
 export const MainImage = styled.img`
   width: 100%;
-`
+`;
 
 export const List = styled.ul`
   list-style-type: none;
@@ -48,7 +48,7 @@ export const List = styled.ul`
     flex-direction: column;
     margin: 32px 0;
   }
-`
+`;
 
 export const ListContainer = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ export const ListContainer = styled.div`
     display: flex;
     margin-left: 18px;
   }
-`
+`;
 
 export const ListTitle = styled.h4`
   font-weight: 700;
@@ -79,7 +79,7 @@ export const ListTitle = styled.h4`
   letter-spacing: 0.02em;
   margin-bottom: 4px;
 }
-`
+`;
 
 export const ListParagraph = styled.p`
   font-size: 18px;
@@ -95,7 +95,7 @@ export const ListParagraph = styled.p`
     font-size: 14px;
     line-height: 22px;
   }
-`
+`;
 
 export const ListItem = styled.li`
   max-width: 320px;
@@ -111,7 +111,7 @@ export const ListItem = styled.li`
   max-width: 320px;
   flex-direction: row;
 }
-`
+`;
 
 export const ListIcon = styled.img`
   display: block;
@@ -130,4 +130,4 @@ export const ListIcon = styled.img`
     height: 32px;
     margin-bottom: 0px;
   }
-`
+`;

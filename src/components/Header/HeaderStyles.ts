@@ -89,7 +89,10 @@ export const ContactDropDown = styled.button`
   }
 `;
 
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
+type NavProductsIcon = {
+  isOpen: boolean
+}
+export const NavProductsIcon = styled(IoIosArrowDropdown)<NavProductsIcon>`
   margin-left: 8px;
   display: flex;
   align-self: center;
@@ -121,4 +124,4 @@ border-radius: 50px;
     cursor: pointer;
     
   }
-`
+`;
